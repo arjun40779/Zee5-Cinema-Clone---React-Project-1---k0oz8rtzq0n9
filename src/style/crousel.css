@@ -1,0 +1,7 @@
+.item {
+  width: 100vw;
+  display: flex;
+}
+.item img {
+  width: 20rem;
+}

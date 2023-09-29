@@ -1,0 +1,71 @@
+.signup {
+  width: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: white;
+  color: gray;
+}
+.signup h1 {
+  font-size: 1.7rem;
+  color: rgb(27, 23, 23);
+  font-weight: 650;
+}
+.signup p,
+.checkbox__p {
+  font-size: 1rem;
+  color: rgb(32, 30, 30);
+}
+.signup input,
+.signup button {
+  width: 100%;
+  height: 2.5rem;
+  margin: 5px 0;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 5px;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+input:focus {
+  outline: none;
+  border: 2px solid rgb(192, 151, 226);
+}
+.signup .checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 5px;
+}
+.terms {
+  display: flex;
+  height: 3rem;
+}
+.btn__signup {
+  background-color: rgb(192, 151, 226);
+  color: white;
+}
+.signup button.active {
+  background-color: rgb(130, 48, 198);
+}
+.signup a {
+  color: rgb(213, 166, 255);
+  text-decoration: none;
+}
+.form-errors {
+  margin: 0;
+  font-size: 15px;
+  color: red;
+}
+.form-input {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+button {
+  cursor: pointer;
+}

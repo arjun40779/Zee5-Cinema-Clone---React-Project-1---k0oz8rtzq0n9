@@ -1,0 +1,8 @@
+.card .slide_img {
+  height: 320px;
+  width: 100%;
+}
+.collection .card .slide_img {
+  height: 420px;
+  width: 240px;
+}
