@@ -1,20 +1,12 @@
 import "./styles.css";
 import Navbar from "./components/Navbar";
-import Details from "./components/Details";
 
-import { Route, Routes } from "react-router-dom";
-import Signup from "./user/Signup";
-import Login from "./user/Login";
-import Homepage from "./pages/Homepage";
-import Movies from "./pages/Movies";
-import TvShow from "./pages/TvShow";
-import WebSeries from "./pages/WebSeries";
+
 import { useEffect, useState } from "react";
-import Content from "./components/Content";
+
 import Footer from "./components/Footer";
-import Myprofile from "./user/Myprofile";
-import Song from "./pages/Song";
-import Search from "./pages/Search";
+
+import Main from "./components/Main";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -39,18 +31,7 @@ export default function App() {
   return (
     <div className="app">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/myprofile" element={<Myprofile />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/movie" element={<Movies />} />
-        <Route path="/tv show" element={<TvShow />} />
-        <Route path="/web series" element={<WebSeries />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="/serach" element={<Search />} />
-      </Routes>
-
+      <Main />
       <Footer />
     </div>
   );

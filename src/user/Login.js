@@ -10,7 +10,7 @@ import CloseBtn from "../components/CloseBtn";
 import { useUserContext } from "../context/UserContext";
 export default function Login() {
   const navigate = useNavigate();
-  const { setIsLoggedIn, setUser } = useUserContext();
+  const { setIsLoggedIn, setUser, setToken } = useUserContext();
   const user = {
     email: "",
     password: "",
@@ -45,14 +45,17 @@ export default function Login() {
           Accept: "*/* ",
         },
         body: JSON.stringify(userData),
-      },
+      }
     );
     const data = await res.json();
     console.log(data);
     if (data.status == "success") {
       setIsLoggedIn(true);
+      localStorage.setItem("loggedIn", true);
       localStorage.setItem("jwtToken", data.token);
       setUser(data.data);
+      localStorage.setItem("user", JSON.stringify(data.data));
+      setToken(data.token);
       navigate("/");
     } else {
       setIsLoggedIn(false);
@@ -78,8 +81,7 @@ export default function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter your Email"
-            className="email"
-          ></input>
+            className="email"></input>
         </div>
         <div className="form-input">
           {errors.password && touched.password ? (
@@ -93,8 +95,7 @@ export default function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter password"
-            className="password"
-          ></input>
+            className="password"></input>
         </div>
 
         <button type="submit" className="btn__signup active">

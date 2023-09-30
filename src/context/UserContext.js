@@ -3,7 +3,15 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState();
-  const contextValues = { isLoggedIn, setIsLoggedIn, user, setUser };
+  const [token, setToken] = useState(null);
+  const contextValues = {
+    isLoggedIn,
+    setIsLoggedIn,
+    user,
+    setUser,
+    token,
+    setToken,
+  };
   return (
     <UserContext.Provider value={contextValues}>
       {children}

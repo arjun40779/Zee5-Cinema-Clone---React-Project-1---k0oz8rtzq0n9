@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { useMovieContext } from "../context/MovieContext";
+import { divide } from "lodash";
+
+
 const Search = () => {
   const { title } = useMovieContext(); 
   console.log(title);
-  const { results, setResults } = useState([]);
-  const { isLoading, setIsLoading } = useState(true);
+  const [ results, setResults ] = useState([]);
+  const [isLoading, setIsLoading ]= useState(true);
   const url=`https://academics.newtonschool.co/api/v1/ott/show?filter={"title" : \"${title}\"}`;
   const fetchData = async () => {
-  
+    setIsLoading(true)
     console.log(url,"url");
     const res = await fetch(url,
       {
@@ -22,20 +25,22 @@ const Search = () => {
     );
     const data = await res.json(); 
 
-    console.log(data);
+    console.log(data,"data serach");
+    setResults(data.data)
+    setIsLoading(false)
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [title]);
 
   return (
-    <div className="search-results">
-      {/*  {!isLoading &&
-        results.map((item) => {
-          return <Card show={item} key={item._id} />;
-        })} */}
-      {results}
+ 
+       <div className="collection">
+      {!isLoading&& results ? results.map((item) => {
+        return(<Card show={item} key={item._id }/>)
+      }):(<h1>NO RESULTS FOUND</h1>)}
     </div>
+
   );
 };
 export default Search;

@@ -1,8 +1,81 @@
 .card .slide_img {
-  height: 320px;
-  width: 100%;
-}
-.collection .card .slide_img {
-  height: 420px;
+  height: 340;
   width: 240px;
+}
+.collection .card {
+  height: 380px;
+  width: 260px;
+  background-color: rgb(15, 6, 23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+  color: black;
+  display: none;
+  width: 100%;
+  padding: 10px 20px;
+}
+.card:hover .info {
+  display: block;
+}
+.card {
+  height: 340px;
+  width: 240px;
+  background-color: rgb(15, 6, 23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collection .card {
+  height: 340px;
+}
+.collection .card:hover {
+  height: 340px;
+}
+.card:hover {
+  background-color: white;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  /*   z-index: 99; */
+  height: 340px;
+}
+
+.card:hover .slide_img {
+  height: 200px;
+}
+.show-title {
+  font-weight: 900;
+}
+.info p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+.info .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+.info .btn span {
+  border: 1px solid black;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.info i {
+  font-size: 1.5rem;
+}
+.info span:hover {
+  background-color: rgb(130, 48, 198);
+  color: white;
+}
+.info span {
+  color: black;
 }

@@ -1,0 +1,6 @@
+.premium{
+    min-height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

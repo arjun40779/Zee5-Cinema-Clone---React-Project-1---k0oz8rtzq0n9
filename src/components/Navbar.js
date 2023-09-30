@@ -5,15 +5,13 @@ import { useMovieContext } from "../context/MovieContext";
 const Navbar = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();
-  
+
   const handleClick = () => {
-    let title=document.getElementById("search").value;
+    let title = document.getElementById("search").value;
     setTitle(title);
   };
 
   return (
-
-    
     <div className="nav_bar">
       <div className="nav__left">
         <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
@@ -32,7 +30,10 @@ const Navbar = () => {
             <Link to="web series"> Web Series</Link>
           </li>
           <li>
-            <Link to="premium"> premium</Link>
+            <Link to="watchlist"> Watchlist</Link>
+          </li>
+          <li>
+            <Link to="premium"> Premium</Link>
           </li>
         </ul>
       </div>
@@ -40,7 +41,6 @@ const Navbar = () => {
         <div className="search">
           <input
             className="search__bar"
-          
             id="search"
             placeholder="Search for Movies, Show etc."
             type="search"
@@ -62,10 +62,11 @@ const Navbar = () => {
             </button>
           </Link>
         )}
-
-        <button className="btn__buy">
-          <i className="fa-solid fa-crown"></i> BUY PLAN
-        </button>
+        <Link to="/premium">
+          <button className="btn__buy">
+            <i className="fa-solid fa-crown"></i> BUY PLAN
+          </button>
+        </Link>
         {/*  <div className="btn__menu">
           <i className="fa-solid fa-bars"></i>
         </div> */}

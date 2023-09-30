@@ -9,3 +9,10 @@
   align-items: center;
   margin-bottom: 1rem;
 }
+.more {
+  color: rgb(163, 130, 250);
+}
+.more:hover {
+  color: rgb(163, 130, 250);
+  text-decoration: none;
+}

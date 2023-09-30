@@ -16,7 +16,7 @@ export default function Content({ heading, type }) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 6,
       slidesToSlide: 3,
     },
     tablet: {
@@ -35,13 +35,14 @@ export default function Content({ heading, type }) {
     <div className="content">
       <div className="title">
         <h2>{heading}</h2>
-        <Link to={`/${type}`}>More &gt; </Link>
+        <Link className="more" to={`/${type}`}>
+          More &gt;{" "}
+        </Link>
       </div>
       <Carousel
         responsive={responsive}
         autoPlaySpeed={500}
-        itemClass="carousel-item-padding-40-px"
-      >
+        itemClass="carousel-item-padding-40-px">
         {fdata.map((item) => {
           return <Card key={item._id} show={item} />;
         })}

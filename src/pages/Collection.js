@@ -8,7 +8,6 @@ const Collection = ({ type, title }) => {
   /* Fetching the data and filtering  */
   const fetchData = async () => {
     if (page > 5) return;
-
     setIsisLoading(true);
     const res = await fetch(
       `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100?filter={"type" : ${type}}`,
@@ -19,7 +18,7 @@ const Collection = ({ type, title }) => {
           token:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhOWRlYzE3ZGEyNTMyYTM1MzI4NiIsImlhdCI6MTY5MzQ5MzkzMiwiZXhwIjoxNzI1MDI5OTMyfQ.G7iEnDNK3eNO9TPRmPVIpL7bFc-UIQBqd4OQciTxVms",
         },
-      },
+      }
     );
     const data = await res.json();
 
@@ -30,11 +29,11 @@ const Collection = ({ type, title }) => {
   useEffect(() => {
     fetchData();
   }, []);
-  const debouncedFetchMoreItems = debounce(fetchData, 1500);
+  const debouncedFetchMoreItems = debounce(fetchData, 1000);
   /* Infinte scrolling */
   const handleScroll = () => {
     if (
-      window.innerHeight + window.scrollY + 250 >=
+      window.innerHeight + window.scrollY + 400 >=
         document.documentElement.offsetHeight &&
       !isLoading
     ) {
