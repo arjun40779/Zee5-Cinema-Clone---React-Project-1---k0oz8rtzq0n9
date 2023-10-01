@@ -38,15 +38,13 @@
   padding: 0 auto;
 }
 .search__bar {
-  width: 12rem;
-  color:white;
+  width: 15rem;
+  color: white;
   font-size: 1rem;
   border: 1px solid gray;
 }
 .search__bar:focus {
-  width: 15rem;
-  border:2px solid rgb(15, 138, 209)
- 
+  border: 2px solid rgb(15, 138, 209);
 }
 .search__icon {
   color: white;
@@ -63,6 +61,9 @@
   color: white;
   display: flex;
   align-items: center;
+}
+.nav__right input:focus .search {
+  border: 2px solid rgb(117, 39, 181);
 }
 .nav__right input:focus {
   border: none;

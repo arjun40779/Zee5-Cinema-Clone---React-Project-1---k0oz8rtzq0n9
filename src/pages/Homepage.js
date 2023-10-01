@@ -8,7 +8,7 @@ import Details from "../components/Details";
 export default function Homepage({ data }) {
   return (
     <div className="homepage">
-      <h2 className="title">Homepage</h2>
+      <p className="title">Homepage</p>
       {/*   <Hero /> */}
 
       <Content type={"web series"} heading="Web Series" />

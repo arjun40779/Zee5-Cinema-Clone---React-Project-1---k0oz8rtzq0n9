@@ -34,7 +34,7 @@ export default function Content({ heading, type }) {
   return (
     <div className="content">
       <div className="title">
-        <h2>{heading}</h2>
+        <p className="title">{heading}</p>
         <Link className="more" to={`/${type}`}>
           More &gt;{" "}
         </Link>

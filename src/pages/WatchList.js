@@ -12,6 +12,7 @@ const WatchList = () => {
     },
   };
   const fetchWatchlist = async () => {
+    console.log(token);
     const res = await fetch(url, options);
     const data = await res.json();
     console.log(data);

@@ -48,13 +48,10 @@ export default function Login() {
       }
     );
     const data = await res.json();
-    console.log(data);
+    console.log(data.token);
     if (data.status == "success") {
       setIsLoggedIn(true);
-      localStorage.setItem("loggedIn", true);
-      localStorage.setItem("jwtToken", data.token);
       setUser(data.data);
-      localStorage.setItem("user", JSON.stringify(data.data));
       setToken(data.token);
       navigate("/");
     } else {

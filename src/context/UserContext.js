@@ -2,7 +2,11 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({
+    name: "Guest",
+    profileImage:
+      "https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg",
+  });
   const [token, setToken] = useState(null);
   const contextValues = {
     isLoggedIn,

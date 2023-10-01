@@ -67,9 +67,9 @@ const Navbar = () => {
             <i className="fa-solid fa-crown"></i> BUY PLAN
           </button>
         </Link>
-        {/*  <div className="btn__menu">
+        <div className="btn__menu">
           <i className="fa-solid fa-bars"></i>
-        </div> */}
+        </div>
       </div>
     </div>
   );

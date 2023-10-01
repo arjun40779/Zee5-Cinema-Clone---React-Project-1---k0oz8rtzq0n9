@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import debounce from "lodash/debounce";
 import Card from "../components/Card";
+import "../style/collection.css";
 const Collection = ({ type, title }) => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
@@ -10,7 +11,7 @@ const Collection = ({ type, title }) => {
     if (page > 5) return;
     setIsisLoading(true);
     const res = await fetch(
-      `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100?filter={"type" : ${type}}`,
+      `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100`,
       {
         method: "GET",
         headers: {
@@ -21,8 +22,8 @@ const Collection = ({ type, title }) => {
       }
     );
     const data = await res.json();
-
-    setData((prev) => [...prev, ...data.data]);
+    const filData = data.data.filter((item) => item.type == type);
+    setData((prev) => [...prev, ...filData]);
     setPage((prev) => prev + 1);
     setIsisLoading(false);
   };
@@ -49,7 +50,7 @@ const Collection = ({ type, title }) => {
 
   return (
     <div className={`${type}`}>
-      <h1 className="title">{title}</h1>
+      <p className="title">{title}</p>
       <div className="collection">
         {data.map((item) => {
           return <Card show={item} key={item._id} />;

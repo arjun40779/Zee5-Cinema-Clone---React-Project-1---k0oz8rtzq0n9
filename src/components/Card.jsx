@@ -21,14 +21,14 @@ const Card = ({ show }) => {
           {show.keywords.map((item, i) => {
             if (i == 2) return;
 
-            return item + " ";
+            return " " + item + " ";
           })}
         </p>
         <p className="btn">
           <Link to={`/details/${show._id}`}>
-            <span>Watch Now</span>{" "}
+            <span className="watch-now">Watch Now</span>{" "}
           </Link>
-          <AddToWatchlist />
+          <AddToWatchlist show={show} />
         </p>
         <p></p>
       </div>

@@ -1,12 +1,12 @@
 import "./styles.css";
 import Navbar from "./components/Navbar";
 
-
 import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer";
 
 import Main from "./components/Main";
+import ResponsiveNav from "./components/ResponsiveNav";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -21,7 +21,7 @@ export default function App() {
           token:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhOWRlYzE3ZGEyNTMyYTM1MzI4NiIsImlhdCI6MTY5MzQ5MzkzMiwiZXhwIjoxNzI1MDI5OTMyfQ.G7iEnDNK3eNO9TPRmPVIpL7bFc-UIQBqd4OQciTxVms",
         },
-      },
+      }
     );
     const data = await res.json();
     /* console.log(data.data); */
@@ -30,9 +30,10 @@ export default function App() {
 
   return (
     <div className="app">
-      <Navbar />
+      {/*  <Navbar />
       <Main />
-      <Footer />
+      <Footer /> */}
+      <ResponsiveNav />
     </div>
   );
 }

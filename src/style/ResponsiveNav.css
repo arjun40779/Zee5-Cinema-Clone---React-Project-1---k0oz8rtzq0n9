@@ -1,0 +1,45 @@
+.resposiveNav img {
+  height: 3rem;
+}
+
+.resposiveNav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.resposiveNav button {
+  position: absolute;
+  top: 0;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.user-info {
+  display: flex;
+  gap: 2rem;
+  background-color: antiquewhite;
+  align-items: center;
+  padding-left: 1rem;
+}
+.user-info p {
+  margin: 0;
+}
+.resposive-list {
+  text-decoration: none;
+  font-weight: bold;
+  list-style: none;
+  color: black;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+.resposive-list li a {
+  list-style: none;
+  color: black;
+  padding: 1.5rem;
+}
+.resposive-list li {
+  padding: 1rem;
+}
