@@ -75,6 +75,7 @@ const Navbar = () => {
           <i className="fa-solid fa-bars"></i>
         </div>
       </div>
+      
       <ResponsiveNav />
     </div>
   );

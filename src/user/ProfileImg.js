@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-const ProfileImg = ({ user, token }) => {
+const ProfileImg = ({ user }) => {
   const [img, setImg] = useState(user.profileImage);
+  const { token } = useUserContext();
+  console.log(token);
+  const url = "https://academics.newtonschool.co/api/v1/user/updateProfileImage";
+  const options = {
+    method: "PATCH",
+    headers: {
+      Authorization:"Bearer " +token,
+      projectID: "k0oz8rtzq0n9",
+    },
+    body: {
+      profileImage: img,
+    },
+  };  
+
+ 
   const uploadImg = async (img) => {
-    const url =
-      "https://academics.newtonschool.co/api/v1/user/updateProfileImage";
-    const response = await fetch(url, {
-      method: "PATCH",
-      body: {
-        profileImage: img,
-      },
-      headers: {
-        Authorization: token,
-        projectId: "k0oz8rtzq0n9",
-      },
-    });
+    const response=await fetch(url,options)
     const data = await response.json();
     console.log(data);
     console.log(token);
@@ -21,7 +25,8 @@ const ProfileImg = ({ user, token }) => {
   /* choose Image */
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
-    uploadImg(file);
+    setImg(file)
+    uploadImg();
   };
   return (
     <div className="profile-img">
@@ -39,6 +44,7 @@ const ProfileImg = ({ user, token }) => {
         </i> */}
       </div>
       <input type="file" accept="image/*" onChange={handleFileChange} />
+
     </div>
   );
 };

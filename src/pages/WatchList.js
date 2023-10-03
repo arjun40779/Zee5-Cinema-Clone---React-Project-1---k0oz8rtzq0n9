@@ -6,9 +6,10 @@ const WatchList = () => {
   const url = "https://academics.newtonschool.co/api/v1/ott/watchlist/like";
   const options = {
     method: "GET",
+
     headers: {
+      Authorization: "Bearer " + token,
       projectID: "k0oz8rtzq0n9",
-      token: token,
     },
   };
   const fetchWatchlist = async () => {

@@ -10,7 +10,7 @@ const ResponsiveNav = () => {
   const name = user.name ? user.name : "Guest";
   return (
     <div id="mobile-nav" className="resposiveNav">
-      <i onClick={hideNav} class="fa fa-xmark"></i>
+      <i onClick={hideNav} className="fa fa-xmark"></i>
       <div className="logo">
         <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
       </div>
