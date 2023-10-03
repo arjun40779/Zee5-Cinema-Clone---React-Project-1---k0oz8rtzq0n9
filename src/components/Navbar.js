@@ -2,10 +2,14 @@ import "../style/navbar.css";
 import { Link } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import { useMovieContext } from "../context/MovieContext";
+import ResponsiveNav from "./ResponsiveNav";
 const Navbar = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();
-
+  const displayMenu = () => {
+    const nav = document.getElementById("mobile-nav");
+    nav.style.display = "block";
+  };
   const handleClick = () => {
     let title = document.getElementById("search").value;
     setTitle(title);
@@ -67,10 +71,11 @@ const Navbar = () => {
             <i className="fa-solid fa-crown"></i> BUY PLAN
           </button>
         </Link>
-        <div className="btn__menu">
+        <div onClick={displayMenu} className="btn__menu">
           <i className="fa-solid fa-bars"></i>
         </div>
       </div>
+      <ResponsiveNav />
     </div>
   );
 };

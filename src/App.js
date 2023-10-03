@@ -30,10 +30,10 @@ export default function App() {
 
   return (
     <div className="app">
-      {/*  <Navbar />
+      <Navbar />
       <Main />
-      <Footer /> */}
-      <ResponsiveNav />
+      <Footer />
+      {/*   <ResponsiveNav /> */}
     </div>
   );
 }

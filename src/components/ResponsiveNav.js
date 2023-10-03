@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import "../style/ResponsiveNav.css";
 const ResponsiveNav = () => {
+  const hideNav = () => {
+    document.getElementById("mobile-nav").style.display = "none";
+  };
   const { user } = useUserContext();
   const name = user.name ? user.name : "Guest";
   return (
-    <div className="resposiveNav">
-      <button>X</button>
+    <div id="mobile-nav" className="resposiveNav">
+      <i onClick={hideNav} class="fa fa-xmark"></i>
       <div className="logo">
         <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
       </div>
@@ -19,9 +22,9 @@ const ResponsiveNav = () => {
         />
         <p className="user-name">{name}</p>
       </div>
-      <ul className="resposive-list">
+      <ul onClick={hideNav} className="resposive-list">
         <li>
-          <Link to="./">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="./myprofile">Profile</Link>
