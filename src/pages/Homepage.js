@@ -8,9 +8,7 @@ import Details from "../components/Details";
 export default function Homepage({ data }) {
   return (
     <div className="homepage">
-      <p className="title">Homepage</p>
-      {/*   <Hero /> */}
-
+      <Hero />
       <Content type={"web series"} heading="Web Series" />
       <Content type={"tv show"} heading="Tv Show" />
       <Content type={"movie"} heading="Movies" />

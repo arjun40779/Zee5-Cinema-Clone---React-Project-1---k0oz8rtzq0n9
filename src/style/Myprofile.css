@@ -1,3 +1,9 @@
 .myprofile {
   color: white;
 }
+.resposiveNav {
+  z-index: 99999999999;
+}
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+  z-index: 1;
+}
