@@ -22,5 +22,5 @@ ZEE5 is an Indian subscription video-on-demand and over-the-top streaming servic
 
 LinkedIn    https://www.linkedin.com/in/arjun-singh-541554117/  
 Github      https://github.com/arjun40779   
-leetcode    https://leetcode.com/arjun40779/    
-gamil       arjun40779@gmail.com
+Leetcode    https://leetcode.com/arjun40779/    
+Gamil       arjun40779@gmail.com
