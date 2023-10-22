@@ -21,7 +21,7 @@ export default function Content({ heading, type }) {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 7,
+      items: 4,
       slidesToSlide: 2,
     },
     mobile: {
