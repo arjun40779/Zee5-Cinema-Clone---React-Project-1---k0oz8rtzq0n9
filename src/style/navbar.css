@@ -12,6 +12,9 @@
   font-weight: 400;
   max-height: 80px;
 }
+:root {
+  --btn: rgb(117, 39, 181);
+}
 .nav__left {
   display: flex;
   align-items: center;
@@ -104,9 +107,15 @@
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 900px) {
-  .navigation-list {
+@media (max-width: 1000px) {
+  .mob-nav-wrapper {
+    display: block;
+  }
+  .nav_bar {
     display: none;
+  }
+  .app {
+    padding: 0;
   }
 }
 .icon {

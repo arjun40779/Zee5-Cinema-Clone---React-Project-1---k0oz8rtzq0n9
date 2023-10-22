@@ -1,13 +1,10 @@
-import "../style/navbar.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useUserContext } from "../context/UserContext";
-import { useMovieContext } from "../context/MovieContext";
-import ResponsiveNav from "./ResponsiveNav";
-import MoreList from "./MoreList";
-import { useState } from "react";
-import RightNav from "./navigation/RightNav";
-import MobNav from "./navigation/MobNav";
-const Navbar = () => {
+import "./MobNav.css";
+import { useUserContext } from "../../context/UserContext";
+import { useMovieContext } from "../../context/MovieContext";
+import RightNav from "./RightNav";
+const MobNav = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();
   const [activeItem, setActiveItem] = useState("Home");
@@ -24,11 +21,39 @@ const Navbar = () => {
     alert("Comming Soon");
   };
   return (
-    <>
-      <MobNav />
-      <div className="nav_bar">
-        <div className="nav__left">
-          <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
+    <div className="wrapper-mob-nav">
+      <div className="mob-nav">
+        <div className="mob-nav-top">
+          <div className="mob-nav-top-left">
+            <img
+              className="brand-logo-mob"
+              src="https://www.zee5.com/images/ZEE5_logo.svg"
+            ></img>
+
+            <Link to="/premium">
+              <button className="buy-btn-mob">
+                <i className="fa-solid fa-crown"></i> BUY PLAN
+              </button>
+            </Link>
+          </div>
+          <div className="mob-nav-top-right">
+            <i className="fa-solid fa-magnifying-glass"></i>
+
+            <div
+              onClick={() => {
+                setVisible(() => {
+                  return !isVisible;
+                });
+              }}
+              className="btn__menu"
+            >
+              <i className="fa-solid fa-bars"></i>
+            </div>
+
+            {isVisible && <RightNav msg={errMessage} />}
+          </div>
+        </div>
+        <div className="mob-nav-btm">
           <ul className="navigation-list">
             <li
               className={`navigation-list-items ${
@@ -88,62 +113,11 @@ const Navbar = () => {
                 Premium
               </Link>
             </li>
-            <li className="icon">
-              <MoreList msg={errMessage} />
-            </li>
           </ul>
         </div>
-        <div className="nav__right">
-          <div className="search">
-            <Link to="/serach">
-              <span onClick={handleClick} className="search__icon">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </span>
-            </Link>
-            <input
-              className="search__bar"
-              id="search"
-              placeholder="Search for Movies, Show etc."
-              type="search"
-            />
-          </div>
-          <div onClick={errMessage} className="translate-btn">
-            <p>
-              A<sup>अ </sup>
-            </p>
-          </div>
-          {!isLoggedIn ? (
-            <Link to="/login">
-              <button className="btn__login">LOGIN </button>
-            </Link>
-          ) : (
-            <Link to="/myprofile">
-              <button className="btn__login">
-                <i className="fa-regular fa-user"></i>{" "}
-              </button>
-            </Link>
-          )}
-          <Link to="/premium">
-            <button className="btn__buy">
-              <i className="fa-solid fa-crown"></i> BUY PLAN
-            </button>
-          </Link>
-          <div
-            onClick={() => {
-              setVisible(() => {
-                return !isVisible;
-              });
-            }}
-            className="btn__menu"
-          >
-            <i className="fa-solid fa-bars"></i>
-          </div>
-        </div>
-        {isVisible && <RightNav msg={errMessage} />}
-
-        {/* <RightNav /> */}
       </div>
-    </>
+    </div>
   );
 };
-export default Navbar;
+
+export default MobNav;

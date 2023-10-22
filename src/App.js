@@ -9,6 +9,7 @@ import Main from "./components/Main";
 import ResponsiveNav from "./components/ResponsiveNav";
 import RightNav from "./components/navigation/RightNav";
 import Message from "./components/Message";
+import MobNav from "./components/navigation/MobNav";
 
 export default function App() {
   const [data, setData] = useState([]);

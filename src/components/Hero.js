@@ -94,7 +94,6 @@ const Hero = () => {
         centerSlidePercentage={70}
         infinite={true} // Set infinite to true
         keyBoardControl={true} // Enable keyboard control
-        customTransition="all .5" // Custom transition
         removeArrowOnDeviceType={["tablet", "mobile"]} // Optional: remove arrows on smaller devices
         focusOnSelect={true} // Highlight center slide on click
         itemClass="carousel-item-padding-40-px"

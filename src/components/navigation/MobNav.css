@@ -1,0 +1,44 @@
+.mob-nav {
+  color: white;
+  background-color: var(--bgColor);
+}
+.brand-logo-mob {
+  height: 2rem;
+  width: 2rem;
+}
+.buy-btn-mob {
+  background-color: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.mob-nav-top-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mob-nav-top-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.mob-nav-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+}
+.mob-nav-btm ul {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.mob-nav-btm ul li {
+  list-style: none;
+}
