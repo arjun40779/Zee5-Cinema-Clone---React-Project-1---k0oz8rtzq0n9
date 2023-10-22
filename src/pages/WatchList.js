@@ -12,7 +12,7 @@ const WatchList = () => {
 
     headers: {
       Authorization: "Bearer " + token,
-      projectID: "k0oz8rtzq0n9",
+      projectId: "k0oz8rtzq0n9",
     },
   };
   const fetchWatchlist = async () => {

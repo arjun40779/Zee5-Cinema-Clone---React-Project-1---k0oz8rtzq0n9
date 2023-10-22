@@ -79,6 +79,7 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+  color: blueviolet;
 }
 .watch-now:hover {
   background-color: rgb(130, 48, 198);
@@ -93,4 +94,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+#add {
+  color: black;
 }

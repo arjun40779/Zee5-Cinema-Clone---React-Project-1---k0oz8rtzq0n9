@@ -38,19 +38,19 @@ html {
   height: -webkit-fill-available;
   padding-bottom: 1rem;
 }
-body::-webkit-scrollbar {
-  width: 0.8rem;
+.right-nav::-webkit-scrollbar {
+  width: 5px;
   scrollbar-color: white black;
 }
 .homepage {
   display: block;
   background-color: rgb(15, 6, 23);
 }
-html {
+.right-nav {
   --scrollbarBG: rgb(15, 6, 23);
   --thumbBG: white;
 }
-body::-webkit-scrollbar {
+.right-nav::-webkit-scrollbar {
   width: 11px;
 }
 body {

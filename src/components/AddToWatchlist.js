@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 const AddToWatchlist = ({ show }) => {
   const [color, setColor] = useState("regular");
-  const { token } = useUserContext();
+  const { token, isLoggedIn } = useUserContext();
   const url = "https://academics.newtonschool.co/api/v1/ott/watchlist/like";
   const options = {
     method: "PATCH",
@@ -26,7 +26,13 @@ const AddToWatchlist = ({ show }) => {
       setColor("solid");
     }
   };
-  return <i onClick={addShow} className={`fa-${color} fa-bookmark`}></i>;
+  return (
+    <>
+      {isLoggedIn && (
+        <i id="add" onClick={addShow} className={`fa-${color} fa-bookmark`}></i>
+      )}
+    </>
+  );
 };
 
 export default AddToWatchlist;

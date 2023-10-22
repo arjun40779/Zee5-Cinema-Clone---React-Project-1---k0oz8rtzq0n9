@@ -47,7 +47,7 @@ input:focus {
   background-color: rgb(192, 151, 226);
   color: white;
 }
-.signup button.active {
+.signup button.active-btn {
   background-color: rgb(130, 48, 198);
 }
 .signup a {
@@ -68,4 +68,9 @@ input:focus {
 }
 button {
   cursor: pointer;
+}
+#err-msg {
+  color: red;
+  margin: 0.25rem;
+  height: 1rem;
 }

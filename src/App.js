@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 
 import Main from "./components/Main";
 import ResponsiveNav from "./components/ResponsiveNav";
+import RightNav from "./components/navigation/RightNav";
+import Message from "./components/Message";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -33,7 +35,6 @@ export default function App() {
       <Navbar />
       <Main />
       <Footer />
-      {/*   <ResponsiveNav /> */}
     </div>
   );
 }

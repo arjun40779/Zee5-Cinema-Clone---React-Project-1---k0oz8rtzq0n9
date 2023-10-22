@@ -8,9 +8,11 @@ import { LoginSchema } from "./LoginSchema";
 import { signUpSchema } from "./Schema";
 import CloseBtn from "../components/CloseBtn";
 import { useUserContext } from "../context/UserContext";
+import Message from "../components/Message";
 export default function Login() {
   const navigate = useNavigate();
   const { setIsLoggedIn, setUser, setToken } = useUserContext();
+  const [message, setMessage] = useState("");
   const user = {
     email: "",
     password: "",
@@ -48,14 +50,16 @@ export default function Login() {
       }
     );
     const data = await res.json();
-    console.log(data.token);
+    console.log(data);
     if (data.status == "success") {
       setIsLoggedIn(true);
       setUser(data.data);
       setToken(data.token);
+
       navigate("/");
     } else {
       setIsLoggedIn(false);
+      setMessage(data.message);
     }
   };
   return (
@@ -78,7 +82,8 @@ export default function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter your Email"
-            className="email"></input>
+            className="email"
+          ></input>
         </div>
         <div className="form-input">
           {errors.password && touched.password ? (
@@ -92,10 +97,11 @@ export default function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter password"
-            className="password"></input>
+            className="password"
+          ></input>
         </div>
-
-        <button type="submit" className="btn__signup active">
+        <p id="error-msg">{message}</p>
+        <button type="submit" className="btn__signup active-btn">
           Login
         </button>
         <p>

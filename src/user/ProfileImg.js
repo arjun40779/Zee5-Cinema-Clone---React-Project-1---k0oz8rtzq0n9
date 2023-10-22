@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useUserContext } from "../context/UserContext";
+import { json } from "react-router-dom";
 const ProfileImg = ({ user }) => {
   const [img, setImg] = useState(user.profileImage);
   const { token } = useUserContext();
@@ -10,7 +11,8 @@ const ProfileImg = ({ user }) => {
     method: "PATCH",
     headers: {
       Authorization: "Bearer " + token,
-      projectID: "k0oz8rtzq0n9",
+
+      projectId: "k0oz8rtzq0n9",
     },
     body: {
       profileImage: img,
@@ -26,13 +28,13 @@ const ProfileImg = ({ user }) => {
   /* choose Image */
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
+    console.log(file);
     setImg(file);
-    uploadImg();
   };
   return (
     <div className="profile-img">
       <div className="avtar">
-        {user.profileImage ? (
+        {img ? (
           <img src={URL.createObjectURL(img)} alt="avatar" width="200" />
         ) : (
           <img
@@ -45,6 +47,7 @@ const ProfileImg = ({ user }) => {
         </i> */}
       </div>
       <input type="file" accept="image/*" onChange={handleFileChange} />
+      <button onClick={uploadImg}>upload</button>
     </div>
   );
 };

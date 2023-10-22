@@ -11,6 +11,7 @@ import Details from "./Details";
 import Premium from "../pages/Premium";
 import { Route, Routes } from "react-router-dom";
 import WatchList from "../pages/WatchList";
+import Message from "./Message";
 const Main = () => {
   return (
     <div className="main">

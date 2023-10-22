@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "../style/signup.css";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { signUpSchema } from "./Schema";
 import CloseBtn from "../components/CloseBtn";
+import { useUserContext } from "../context/UserContext";
 export default function Signup() {
+  const navigate = useNavigate();
+  const [message, setMessage] = useState("");
   const user = { name: "", email: "", password: "", terms: false };
   const {
     values,
@@ -22,7 +26,7 @@ export default function Signup() {
       register(values);
     },
   });
-
+  const { setIsLoggedIn, setUser, setToken } = useUserContext();
   const register = async (values) => {
     const userData = { ...values, appType: "ott" };
     const res = await fetch(
@@ -36,10 +40,20 @@ export default function Signup() {
           Accept: "*/* ",
         },
         body: JSON.stringify(userData),
-      },
+      }
     );
     const data = await res.json();
     console.log(userData, data);
+    if (data.status == "success") {
+      setIsLoggedIn(true);
+      setUser(data.data);
+      setToken(data.token);
+
+      navigate("/");
+    } else {
+      setIsLoggedIn(false);
+      setMessage(data.message);
+    }
   };
   return (
     <div className="wrapper">
@@ -130,8 +144,8 @@ export default function Signup() {
             </label>
           </div>
         </div>
-
-        <button className="btn__signup active">Create account</button>
+        <p id="err-msg">{message}</p>
+        <button className="btn__signup active-btn">Create account</button>
         <p>
           Already registered? <Link to="/login"> Login</Link>
         </p>

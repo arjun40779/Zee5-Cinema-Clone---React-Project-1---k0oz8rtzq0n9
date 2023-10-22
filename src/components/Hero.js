@@ -89,7 +89,7 @@ const Hero = () => {
     <div className="hero">
       <Carousel
         responsive={responsive}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={1000}
         centerMode={true}
         centerSlidePercentage={70}
         infinite={true} // Set infinite to true
