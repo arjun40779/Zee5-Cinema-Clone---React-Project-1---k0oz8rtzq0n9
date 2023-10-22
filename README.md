@@ -6,7 +6,7 @@ ZEE5 is an Indian subscription video-on-demand and over-the-top streaming servic
 
 ## Tech Stack
 
-**Frontend:** Reactjs, Html, css,javascript
+**Frontend:** Reactjs, Html, css, javascript
 
 
 
