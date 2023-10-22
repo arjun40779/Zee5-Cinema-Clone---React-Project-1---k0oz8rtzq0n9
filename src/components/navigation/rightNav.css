@@ -98,3 +98,13 @@ a {
 a:hover {
   color: white;
 }
+@media (max-width: 1000px) {
+  .right-nav {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 1rem;
+  }
+  .right-nav-wrapper {
+    background-color: transparent;
+  }
+}

@@ -16,21 +16,15 @@ const Card = ({ show }) => {
       </Link>
       <div className="info">
         <p className="show-title">{show.title}</p>
-        <p className="show-info">
-          {show.type} -
-          {show.keywords.map((item, i) => {
-            if (i == 2) return;
 
-            return " " + item + " ";
-          })}
-        </p>
-        <p className="btn">
+        <div className="btns">
           <Link to={`/details/${show._id}`}>
-            <span className="watch-now">Watch Now</span>{" "}
+            <span className="watch-btn">
+              <i class="fa-solid fa-play"></i> Watch
+            </span>{" "}
           </Link>
           <AddToWatchlist show={show} />
-        </p>
-        <p></p>
+        </div>
       </div>
     </div>
   );

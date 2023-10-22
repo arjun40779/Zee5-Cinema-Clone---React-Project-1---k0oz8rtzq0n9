@@ -106,11 +106,19 @@
   padding: 5px 8px;
   font-size: 1.5rem;
 }
-
+.wrapper-mob-nav {
+  display: none;
+}
 @media (max-width: 1000px) {
-  .mob-nav-wrapper {
+  .wrapper-mob-nav {
     display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
   }
+
   .nav_bar {
     display: none;
   }
@@ -192,9 +200,9 @@ ul.more-list li:hover {
   color: white;
   font-weight: 600;
   font-size: 1rem;
-
   margin: 0;
 }
+
 .translate-btn {
   /* border: 1px solid white; */
   padding: 0.3rem;

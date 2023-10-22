@@ -1,10 +1,11 @@
 .card .slide_img {
-  height: 340;
-  width: 240px;
+  height: 15rem;
+  width: 9rem;
 }
 .collection .card {
-  height: 380px;
-  width: 260px;
+  padding-top: 0.5rem;
+  height: 15rem;
+  width: 9rem;
   background-color: rgb(15, 6, 23);
   display: flex;
   align-items: center;
@@ -14,38 +15,31 @@
   color: black;
   display: none;
   width: 100%;
-  padding: 10px 20px;
+  padding: 0.75rem;
+  font-weight: 500;
 }
 .card:hover .info {
   display: block;
 }
 .card {
-  height: 340px;
-  width: 240px;
   background-color: rgb(15, 6, 23);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.collection .card {
-  height: 340px;
-}
-.collection .card:hover {
-  height: 340px;
-}
+
 .card:hover {
   background-color: white;
   flex-direction: column;
   border-radius: 10px;
   justify-content: flex-start;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   /*   z-index: 99; */
-  height: 340px;
 }
 
 .card:hover .slide_img {
-  height: 200px;
-  width: 220px;
+  height: 10rem;
+  width: 8rem;
 }
 .show-title {
   font-weight: 900;
@@ -53,7 +47,10 @@
 .info p {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  height: 1rem;
+  overflow: hidden;
 }
 .info .btn {
   display: flex;
@@ -69,11 +66,11 @@
 }
 
 .collection .card {
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 .collection .card:hover {
   z-index: 999;
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 .watch-now {
   padding: 0.5rem 1rem;
@@ -97,4 +94,42 @@ a:hover {
 }
 #add {
   color: black;
+}
+.show-title {
+  font-size: 0.5rem;
+}
+.btns {
+}
+.watch-btn {
+  color: black;
+  border: 1px solid black;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+.watch-btn :hover {
+  color: white;
+  background-color: var(--btn);
+}
+.fa-play:before {
+  content: "\f04b";
+  color: black;
+  font-size: 0.75rem;
+}
+@media (width: 1000px) {
+  .card {
+    height: 10rem;
+    width: 5rem;
+  }
+  .card .slide_img {
+    height: 10rem;
+    width: 6rem;
+  }
+  .collection .card {
+    height: auto;
+    width: auto;
+  }
+}
+.main {
+  padding-left: 2rem;
 }

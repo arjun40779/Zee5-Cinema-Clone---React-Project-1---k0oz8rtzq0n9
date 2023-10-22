@@ -185,6 +185,15 @@ hr {
 
   gap: 1rem;
 }
+@media (max-width: 1000px) {
+  .collection {
+    display: flex;
+    gap: 2rem;
+  }
+  .collection .card {
+    height: auto;
+  }
+}
 .loading {
   color: white;
   display: flex;

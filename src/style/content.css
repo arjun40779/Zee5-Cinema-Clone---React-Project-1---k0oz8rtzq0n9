@@ -19,3 +19,18 @@
 .content {
   padding-left: 2.5rem;
 }
+.title {
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  font-weight: bolder;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 1rem;
+    padding: 0;
+  }
+}

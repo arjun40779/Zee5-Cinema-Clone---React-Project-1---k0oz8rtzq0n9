@@ -9,6 +9,7 @@ const MobNav = () => {
   const { setTitle } = useMovieContext();
   const [activeItem, setActiveItem] = useState("Home");
   const [isVisible, setVisible] = useState(false);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
@@ -23,36 +24,66 @@ const MobNav = () => {
   return (
     <div className="wrapper-mob-nav">
       <div className="mob-nav">
-        <div className="mob-nav-top">
-          <div className="mob-nav-top-left">
-            <img
-              className="brand-logo-mob"
-              src="https://www.zee5.com/images/ZEE5_logo.svg"
-            ></img>
+        {!isSearchVisible && (
+          <div className="mob-nav-top">
+            <div className="mob-nav-top-left">
+              <img
+                className="brand-logo-mob"
+                src="https://www.zee5.com/images/ZEE5_logo.svg"
+              ></img>
 
-            <Link to="/premium">
-              <button className="buy-btn-mob">
-                <i className="fa-solid fa-crown"></i> BUY PLAN
-              </button>
-            </Link>
-          </div>
-          <div className="mob-nav-top-right">
-            <i className="fa-solid fa-magnifying-glass"></i>
-
-            <div
-              onClick={() => {
-                setVisible(() => {
-                  return !isVisible;
-                });
-              }}
-              className="btn__menu"
-            >
-              <i className="fa-solid fa-bars"></i>
+              <Link to="/premium">
+                <button className="buy-btn-mob">
+                  <i className="fa-solid fa-crown"></i> BUY PLAN
+                </button>
+              </Link>
             </div>
+            <div className="mob-nav-top-right">
+              <i
+                onClick={() => {
+                  setIsSearchVisible(() => true);
+                }}
+                className="fa-solid fa-magnifying-glass"
+              ></i>
+              <div
+                onClick={() => {
+                  setVisible(() => {
+                    return !isVisible;
+                  });
+                }}
+                className="btn__menu"
+              >
+                <i className="fa-solid fa-bars"></i>
+              </div>
 
-            {isVisible && <RightNav msg={errMessage} />}
+              {isVisible && <RightNav msg={errMessage} />}
+            </div>
           </div>
-        </div>
+        )}
+        {isSearchVisible && (
+          <div className="mob-search">
+            <i
+              onClick={() => {
+                setIsSearchVisible(() => false);
+              }}
+              class="fa-solid fa-arrow-left"
+            ></i>
+            <div className="search">
+              <Link to="/serach">
+                <span onClick={handleClick} className="search__icon">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </Link>
+              <input
+                className="search__bar"
+                id="search"
+                placeholder="Search for Movies, Show etc."
+                type="search"
+              />
+            </div>
+          </div>
+        )}
+
         <div className="mob-nav-btm">
           <ul className="navigation-list">
             <li

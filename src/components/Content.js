@@ -16,17 +16,17 @@ export default function Content({ heading, type }) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6,
+      items: 7,
       slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 7,
       slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 3,
       slidesToSlide: 1,
     },
   };
@@ -41,8 +41,10 @@ export default function Content({ heading, type }) {
       </div>
       <Carousel
         responsive={responsive}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
         autoPlaySpeed={500}
-        itemClass="carousel-item-padding-40-px">
+        itemClass="carousel-item-padding-40-px"
+      >
         {fdata.map((item) => {
           return <Card key={item._id} show={item} />;
         })}
