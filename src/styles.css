@@ -184,6 +184,7 @@ hr {
 @media (max-width: 1000px) {
   .collection {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
   }
   .collection .card {
