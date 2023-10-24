@@ -11,12 +11,12 @@ export default function Content({ heading, type }) {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 10,
       slidesToSlide: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 7,
+      items: 9,
       slidesToSlide: 3,
     },
     tablet: {

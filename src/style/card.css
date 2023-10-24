@@ -99,6 +99,9 @@ a:hover {
   font-size: 0.5rem;
 }
 .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .watch-btn {
   color: black;

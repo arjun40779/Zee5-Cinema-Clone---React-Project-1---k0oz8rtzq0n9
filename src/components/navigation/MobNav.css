@@ -69,6 +69,6 @@
 }
 @media (max-width: 1000px) {
   .main {
-    margin-top: 6.5rem;
+    padding-tops: 6.5rem;
   }
 }

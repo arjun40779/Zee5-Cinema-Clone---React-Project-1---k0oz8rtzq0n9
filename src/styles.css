@@ -179,11 +179,7 @@ hr {
 
 .collection {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  flex-wrap: wrap;
-  justify-content: center;
-
-  gap: 1rem;
+  grid-template-columns: repeat(9, 1fr);
 }
 @media (max-width: 1000px) {
   .collection {

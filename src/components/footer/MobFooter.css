@@ -1,0 +1,136 @@
+.wrapper-mob-footer {
+  padding-top: 2rem;
+  width: 100vw;
+  background-color: var(--bgColor);
+}
+.store-icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.store-icon img {
+  height: 3rem;
+}
+.social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.social-icon i {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.social-icon-container {
+  padding: 1.25rem;
+  padding-bottom: 0.3rem;
+  padding-top: 1.3rem;
+  background-color: #28202f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  padding-right: 1rem;
+  margin: 0;
+  justify-content: center;
+}
+.footer-menu li {
+  color: rgb(223, 215, 215);
+  list-style: none;
+  padding: 0 2rem;
+
+  border-right: 1px solid rgb(223, 215, 215);
+}
+.footer-menu > :first-child {
+  padding-left: 0;
+}
+.footer-menu li a {
+  color: rgb(223, 215, 215);
+}
+.footer-maga-menu {
+  padding: 2rem 0;
+  margin: 0;
+}
+.footer-maga-menu .menu-items {
+  font-size: 1rem;
+  color: white;
+  list-style: none;
+  margin: 0;
+
+  border-bottom: 1px solid rgb(50, 49, 49);
+  font-weight: 600;
+}
+.menu-items p {
+  margin: 0;
+  padding: 1rem;
+  padding-left: 0;
+}
+.menu-items ul {
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid rgb(50, 49, 49);
+  color: rgb(161, 152, 152);
+}
+.expanded-list {
+  display: none;
+}
+.active-list {
+  display: block;
+}
+ul li {
+  cursor: pointer;
+}
+.copy-right-text {
+  color: rgb(150, 145, 145);
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
+.footer-icons {
+  color: white;
+}
+.footer-icons h3 {
+  display: none;
+}
+.mob-footer {
+  padding: 2rem 1rem;
+  font-size: 80%;
+}
+@media (min-width: 1001px) {
+  .mob-footer * {
+    font-size: 95%;
+  }
+  .mob-footer {
+    font-size: 100%;
+    padding: 2rem 8rem;
+  }
+  .footer-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .expanded-list {
+    display: block;
+  }
+  .footer-menu {
+    justify-content: flex-start;
+  }
+  .footer-maga-menu {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-icons h3 {
+    display: block;
+  }
+  .mob-footer li {
+    list-style: none;
+  }
+}

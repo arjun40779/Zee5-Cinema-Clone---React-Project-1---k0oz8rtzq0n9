@@ -10,6 +10,7 @@ import ResponsiveNav from "./components/ResponsiveNav";
 import RightNav from "./components/navigation/RightNav";
 import Message from "./components/Message";
 import MobNav from "./components/navigation/MobNav";
+import MobFooter from "./components/footer/MobFooter";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -35,7 +36,8 @@ export default function App() {
     <div className="app">
       <Navbar />
       <Main />
-      <Footer />
+
+      <MobFooter />
     </div>
   );
 }

@@ -17,7 +17,7 @@
   text-decoration: none;
 }
 .content {
-  padding-left: 2.5rem;
+  padding-left: 2.5rem 0;
 }
 .title {
   font-size: 1.2rem;
