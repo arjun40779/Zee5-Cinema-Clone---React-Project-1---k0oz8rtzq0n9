@@ -18,7 +18,7 @@ const Details = ({}) => {
             token:
               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhOWRlYzE3ZGEyNTMyYTM1MzI4NiIsImlhdCI6MTY5MzQ5MzkzMiwiZXhwIjoxNzI1MDI5OTMyfQ.G7iEnDNK3eNO9TPRmPVIpL7bFc-UIQBqd4OQciTxVms",
           },
-        },
+        }
       );
       const data = await res.json();
       console.log(data.data);
@@ -35,7 +35,7 @@ const Details = ({}) => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <video width="720" height="480" controls>
+          <video className="video" controls>
             <source src={show.video_url} type="video/mp4" />
           </video>
           <h1>{show.title}</h1>

@@ -1,3 +1,13 @@
 .details {
   color: white;
 }
+.video {
+  height: 480px;
+  width: 720px;
+}
+@media (max-width: 1000px) {
+  .video {
+    height: 240px;
+    width: 360px;
+  }
+}
