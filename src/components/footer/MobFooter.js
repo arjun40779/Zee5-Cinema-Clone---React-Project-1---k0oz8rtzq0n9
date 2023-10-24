@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./MobFooter.css";
 import { useState, React } from "react";
 
@@ -16,28 +17,54 @@ const MobFooter = () => {
         <div className="footer-icons">
           <div className="store-icon">
             <h3>Download App</h3>
-            <img
-              src="https://www.zee5.com/images/play_store.png?ver=3.15.5"
-              alt="playstore"
-              className="store-icon-img"
-            ></img>
-            <img
-              src="https://www.zee5.com/images/app_store.png?ver=3.15.5"
-              alt="applestore"
-              className="store-icon-img"
-            ></img>
+            <Link
+              to={
+                "https://play.google.com/store/apps/details?id=com.graymatrix.did&pli=1"
+              }
+            >
+              <img
+                src="https://www.zee5.com/images/play_store.png?ver=3.15.5"
+                alt="playstore"
+                className="store-icon-img"
+              ></img>
+            </Link>
+            <Link
+              to={
+                "https://apps.apple.com/in/app/zee5-movies-web-series-shows/id743691886"
+              }
+            >
+              <img
+                src="https://www.zee5.com/images/app_store.png?ver=3.15.5"
+                alt="applestore"
+                className="store-icon-img"
+              ></img>
+            </Link>
           </div>
           <div className="social-icon">
             <h3>Connect with Us</h3>
-            <div className="social-icon-container">
-              <i class="fa-brands fa-square-facebook"></i>
-            </div>
-            <div className="social-icon-container">
-              <i className="fa-brands fa-twitter"></i>
-            </div>
-            <div className="social-icon-container">
-              <i className="fa-brands fa-youtube"></i>
-            </div>
+            <Link to={"https://www.facebook.com/ZEE5/"} target="_blank">
+              <div className="social-icon-container">
+                <i class="fa-brands fa-square-facebook"></i>
+              </div>
+            </Link>
+            <Link to={"https://www.instagram.com/zee5/"} target="_blank">
+              <div className="social-icon-container">
+                <i class="fa-brands fa-square-instagram"></i>
+              </div>
+            </Link>
+            <Link to={"https://twitter.com/zee5india"} target="_blank">
+              <div className="social-icon-container">
+                <i className="fa-brands fa-twitter"></i>
+              </div>
+            </Link>
+            <Link
+              to={"https://www.youtube.com/channel/UCXOgAl4w-FQero1ERbGHpXQ"}
+              target="_blank"
+            >
+              <div className="social-icon-container">
+                <i className="fa-brands fa-youtube"></i>
+              </div>
+            </Link>
           </div>
         </div>
         <ul className="footer-menu">
