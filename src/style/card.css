@@ -119,7 +119,13 @@ a:hover {
   color: black;
   font-size: 0.75rem;
 }
-@media (width: 1000px) {
+.main {
+  padding-left: 2rem;
+}
+@media (max-width: 1000px) {
+  .main {
+    padding: 0;
+  }
   .card {
     height: 10rem;
     width: 5rem;
@@ -132,7 +138,4 @@ a:hover {
     height: auto;
     width: auto;
   }
-}
-.main {
-  padding-left: 2rem;
 }
