@@ -91,7 +91,7 @@ export default function Login() {
           ) : null}
 
           <input
-            type="text"
+            type="password"
             name="password"
             value={values.password}
             onChange={handleChange}

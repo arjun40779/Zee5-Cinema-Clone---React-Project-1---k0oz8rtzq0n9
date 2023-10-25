@@ -15,11 +15,38 @@
   top: 5rem;
   font-size: 1rem;
   padding: 0;
-  padding-left: 1rem;
+
   padding-right: 1rem;
   height: 80vh;
   overflow: auto;
 }
+.right-nav-profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.75rem;
+  background-color: rgb(29, 21, 37);
+}
+.right-nav-user-details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.right-nav-user-details i {
+  font-size: 1.5rem;
+}
+.right-nav-user-details h3 {
+  font-size: 1.5rem;
+}
+.fa-greater-than {
+  color: rgb(167, 133, 255);
+}
+.right-nav-user-img {
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  background-color: rgb(43, 40, 40);
+}
+
 .right-nav-items {
   list-style: none;
   width: 100%;
@@ -102,7 +129,7 @@ a:hover {
   .right-nav {
     width: 100vw;
     height: 100vh;
-    margin-top: 1rem;
+    top: 3.5rem;
   }
   .right-nav-wrapper {
     background-color: transparent;

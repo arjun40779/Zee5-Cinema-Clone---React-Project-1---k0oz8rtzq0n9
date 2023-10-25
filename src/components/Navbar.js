@@ -20,15 +20,18 @@ const Navbar = () => {
     let title = document.getElementById("search").value;
     setTitle(title);
   };
-  const errMessage = () => {
+  const errMessage = (e) => {
     alert("Comming Soon");
+    event.stopImmediatePropagation();
   };
   return (
     <>
       <MobNav />
       <div className="nav_bar">
         <div className="nav__left">
-          <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
+          <Link to={"./"}>
+            <img src="https://www.zee5.com/images/ZEE5_logo.svg" alt="zee5" />
+          </Link>
           <ul className="navigation-list">
             <li
               className={`navigation-list-items ${
@@ -128,18 +131,8 @@ const Navbar = () => {
               <i className="fa-solid fa-crown"></i> BUY PLAN
             </button>
           </Link>
-          <div
-            onClick={() => {
-              setVisible(() => {
-                return !isVisible;
-              });
-            }}
-            className="btn__menu"
-          >
-            <i className="fa-solid fa-bars"></i>
-          </div>
         </div>
-        {isVisible && <RightNav msg={errMessage} />}
+        <RightNav msg={errMessage} />
 
         {/* <RightNav /> */}
       </div>
