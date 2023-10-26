@@ -219,3 +219,8 @@ ul.more-list li:hover {
 .btn__login {
   padding: 1rem 0;
 }
+@media (max-width: 1000px) {
+  .nav_bar {
+    display: none;
+  }
+}

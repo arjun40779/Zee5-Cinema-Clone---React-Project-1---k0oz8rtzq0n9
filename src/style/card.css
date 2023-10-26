@@ -62,7 +62,7 @@
 }
 
 .info i {
-  font-size: 1.5rem;
+  font-size: 0.65rem;
 }
 
 .collection .card {
@@ -92,9 +92,7 @@ a {
 a:hover {
   text-decoration: none;
 }
-#add {
-  color: black;
-}
+
 .show-title {
   font-size: 0.5rem;
 }
@@ -116,16 +114,33 @@ a:hover {
 }
 .fa-play:before {
   content: "\f04b";
-  color: black;
+  color: inherit;
   font-size: 0.75rem;
 }
 .main {
   padding-left: 2rem;
   /*  padding-top: 6rem; */
 }
+.watch-btn i {
+  color: black;
+}
+.watch-btn:hover,
+.watch-btn:hover i {
+  background-color: var(--btn);
+  border: none;
+  color: white;
+}
+#add {
+  color: black;
+  font-size: 1rem;
+}
+#add:hover {
+  color: black;
+}
 @media (max-width: 1000px) {
   .main {
     padding: 0;
+    padding-top: 2rem;
   }
   .card {
     height: 10rem;

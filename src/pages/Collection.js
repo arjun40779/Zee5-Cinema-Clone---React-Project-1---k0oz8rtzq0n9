@@ -8,7 +8,7 @@ const Collection = ({ type, title }) => {
   const [isLoading, setIsisLoading] = useState(true);
   /* Fetching the data and filtering  */
   const fetchData = async () => {
-    if (page > 5) return;
+    if (page > 20) return;
     setIsisLoading(true);
     const res = await fetch(
       `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100`,
@@ -30,11 +30,11 @@ const Collection = ({ type, title }) => {
   useEffect(() => {
     fetchData();
   }, []);
-  const debouncedFetchMoreItems = debounce(fetchData, 1000);
+  const debouncedFetchMoreItems = debounce(fetchData, 1500);
   /* Infinte scrolling */
   const handleScroll = () => {
     if (
-      window.innerHeight + window.scrollY + 400 >=
+      window.innerHeight + window.scrollY + 600 >=
         document.documentElement.offsetHeight &&
       !isLoading
     ) {

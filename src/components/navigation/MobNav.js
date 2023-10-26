@@ -45,18 +45,8 @@ const MobNav = () => {
                 }}
                 className="fa-solid fa-magnifying-glass"
               ></i>
-              <div
-                onClick={() => {
-                  setVisible(() => {
-                    return !isVisible;
-                  });
-                }}
-                className="btn__menu"
-              >
-                <i className="fa-solid fa-bars"></i>
-              </div>
 
-              {isVisible && <RightNav msg={errMessage} />}
+              <RightNav msg={errMessage} />
             </div>
           </div>
         )}

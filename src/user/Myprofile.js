@@ -19,7 +19,22 @@ const Myprofile = () => {
 
   return (
     <div className="myprofile">
-      <ProfileImg user={user} token={token} />
+      <div className="profile-img">
+        <div className="avtar">
+          {user.profileImage ? (
+            <img
+              src={URL.createObjectURL(user.profileImage)}
+              alt="avatar"
+              width="200"
+            />
+          ) : (
+            <img
+              src="https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg"
+              alt="Img"
+            />
+          )}
+        </div>
+      </div>
       <h1>{user.name}</h1>
       <h3>{user.email}</h3>
       <h3>{user.paymentDetails}</h3>

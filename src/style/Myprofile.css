@@ -1,9 +1,32 @@
 .myprofile {
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 .resposiveNav {
   z-index: 99999999999;
 }
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   z-index: 1;
+}
+.avtar {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.avtar img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+.logout_btn {
+  background-color: var(--btn);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+  border-radius: 7px;
+  border: none;
 }
