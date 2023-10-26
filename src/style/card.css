@@ -121,6 +121,7 @@ a:hover {
 }
 .main {
   padding-left: 2rem;
+  /*  padding-top: 6rem; */
 }
 @media (max-width: 1000px) {
   .main {

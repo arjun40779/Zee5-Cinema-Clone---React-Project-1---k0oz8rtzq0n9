@@ -1,8 +1,7 @@
-import { useMovieContext } from "../context/MovieContext";
-import "../style/Hero.css";
-import Card from "./Card";
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "../style/crousel.css";
 const data = [
   {
     id: 1,
@@ -62,47 +61,23 @@ const data = [
     keywords: ["Comedy", "Thriller"],
   },
 ];
-const Hero = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
+const HeroBanner = () => {
   return (
-    <div className="hero">
-      <Carousel
-        responsive={responsive}
-        autoPlaySpeed={1000}
-        centerMode={true}
-        centerSlidePercentage={70}
-        infinite={true} // Set infinite to true
-        keyBoardControl={true} // Enable keyboard control
-        removeArrowOnDeviceType={["tablet", "mobile"]} // Optional: remove arrows on smaller devices
-        focusOnSelect={true} // Highlight center slide on click
-        itemClass="carousel-item-padding-40-px"
-      >
-        {data.map((item) => {
-          return <img key={item.id} src={`${item.thumbnail}`} />;
-        })}
-      </Carousel>
-    </div>
+    <Carousel
+      autoPlay={true}
+      interval={2000}
+      infiniteLoop={true}
+      showThumbs={false}
+    >
+      {data.map((item) => {
+        return (
+          <div className="carousel-container">
+            <img src={item.thumbnail} alt={item.title}></img>
+          </div>
+        );
+      })}
+    </Carousel>
   );
 };
-export default Hero;
+
+export default HeroBanner;

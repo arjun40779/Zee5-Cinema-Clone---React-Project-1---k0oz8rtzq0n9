@@ -5,3 +5,14 @@
 .item img {
   width: 20rem;
 }
+.carousel-container img {
+  width: 80%;
+}
+.carousel .slide img {
+  width: 80%;
+}
+@media (max-width: 900px) {
+  .carousel .slide img {
+    width: 100%;
+  }
+}

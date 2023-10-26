@@ -11,6 +11,7 @@ import RightNav from "./components/navigation/RightNav";
 import Message from "./components/Message";
 import MobNav from "./components/navigation/MobNav";
 import MobFooter from "./components/footer/MobFooter";
+import HeroBanner from "./components/HeroBanner";
 
 export default function App() {
   const [data, setData] = useState([]);

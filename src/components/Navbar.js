@@ -133,8 +133,6 @@ const Navbar = () => {
           </Link>
         </div>
         <RightNav msg={errMessage} />
-
-        {/* <RightNav /> */}
       </div>
     </>
   );
