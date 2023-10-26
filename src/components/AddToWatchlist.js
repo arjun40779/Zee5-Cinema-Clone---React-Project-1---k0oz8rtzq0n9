@@ -19,6 +19,7 @@ const AddToWatchlist = ({ show }) => {
     const res = await fetch(url, options);
     const data = await res.json();
     console.log(data);
+    alert(data.message);
     console.log(show._id, "show id");
     if (color == "solid") {
       setColor("regular");
