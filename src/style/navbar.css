@@ -219,8 +219,13 @@ ul.more-list li:hover {
 .btn__login {
   padding: 1rem 0;
 }
+#search {
+  border: none;
+  background-color: var(--bgColor);
+}
 @media (max-width: 1000px) {
   .nav_bar {
     display: none;
+    background-color: var(--bgColor);
   }
 }
