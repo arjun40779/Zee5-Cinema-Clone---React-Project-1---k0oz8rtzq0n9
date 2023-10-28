@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useEffect } from "react";
 import { useState } from "react";
-import "../style/Details.css";
+import "./Details.css";
 const Details = ({}) => {
   const { id } = useParams();
   const [show, setShow] = useState({});

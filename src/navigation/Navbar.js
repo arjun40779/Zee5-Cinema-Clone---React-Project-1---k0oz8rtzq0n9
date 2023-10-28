@@ -1,12 +1,12 @@
-import "../style/navbar.css";
+import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import { useMovieContext } from "../context/MovieContext";
-import ResponsiveNav from "./ResponsiveNav";
+
 import MoreList from "./MoreList";
 import { useState } from "react";
-import RightNav from "./navigation/RightNav";
-import MobNav from "./navigation/MobNav";
+import RightNav from "./RightNav";
+import MobNav from "./MobNav";
 const Navbar = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();

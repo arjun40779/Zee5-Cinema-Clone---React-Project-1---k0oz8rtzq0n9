@@ -1,9 +1,11 @@
-import React from 'react'
-import "../style/premium.css"
+import React from "react";
+import "./premium.css";
 const Premium = () => {
   return (
-    <div className='premium'><h1>COMMING SOON</h1></div>
-  )
-}
+    <div className="premium">
+      <h1>COMMING SOON</h1>
+    </div>
+  );
+};
 
-export default Premium
+export default Premium;

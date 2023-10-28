@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./MobNav.css";
-import { useUserContext } from "../../context/UserContext";
-import { useMovieContext } from "../../context/MovieContext";
+import { useUserContext } from "../context/UserContext";
+import { useMovieContext } from "../context/MovieContext";
 import RightNav from "./RightNav";
 const MobNav = () => {
   const { isLoggedIn } = useUserContext();

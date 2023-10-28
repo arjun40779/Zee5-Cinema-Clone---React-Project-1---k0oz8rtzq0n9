@@ -187,6 +187,10 @@ const MobFooter = () => {
             Copyright &#169; 2023 Zee Entertainment Enterprises Ltd. All Rights
             reserved.{" "}
           </p>
+          <p>
+            Developed by{" "}
+            <Link to={"https://arjun40779-portfolio.netlify.app/"}>Arjun.</Link>
+          </p>
         </div>
       </div>
     </div>

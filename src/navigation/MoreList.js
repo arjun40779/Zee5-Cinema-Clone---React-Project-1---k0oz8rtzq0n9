@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/navbar.css";
+import "./navbar.css";
 const MoreList = ({ msg }) => {
   const [isListVisible, setListVisible] = useState(false);
 

@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+
 import Content from "../components/Content";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import "../style/homepage.css";
-import Details from "../components/Details";
+
+import "./homepage.css";
+
 import HeroBanner from "../components/HeroBanner";
 export default function Homepage({ data }) {
   return (

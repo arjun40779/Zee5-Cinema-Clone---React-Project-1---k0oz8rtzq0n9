@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/signup.css";
+import "./signup.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./rightNav.css";
 import { Link } from "react-router-dom";
 import { ErrorMessage } from "formik";
-import { useUserContext } from "../../context/UserContext";
+import { useUserContext } from "../context/UserContext";
 const RightNav = ({ msg }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isNavVisible, setIsNavVisible] = useState(false);

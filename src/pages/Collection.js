@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import debounce from "lodash/debounce";
 import Card from "../components/Card";
-import "../style/collection.css";
+import "./collection.css";
 const Collection = ({ type, title }) => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);

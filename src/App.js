@@ -1,17 +1,10 @@
 import "./styles.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./navigation/Navbar";
 
 import { useEffect, useState } from "react";
 
-import Footer from "./components/Footer";
-
 import Main from "./components/Main";
-import ResponsiveNav from "./components/ResponsiveNav";
-import RightNav from "./components/navigation/RightNav";
-import Message from "./components/Message";
-import MobNav from "./components/navigation/MobNav";
-import MobFooter from "./components/footer/MobFooter";
-import HeroBanner from "./components/HeroBanner";
+import MobFooter from "./footer/MobFooter";
 
 export default function App() {
   const [data, setData] = useState([]);

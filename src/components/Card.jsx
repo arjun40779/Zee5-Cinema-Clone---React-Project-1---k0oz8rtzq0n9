@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Details from "./Details";
-import "../style/card.css";
+import "./card.css";
 import AddToWatchlist from "./AddToWatchlist";
 const Card = ({ show }) => {
   return (
