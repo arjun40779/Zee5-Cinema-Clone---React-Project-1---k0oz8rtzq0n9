@@ -21,9 +21,9 @@ const Details = ({}) => {
         }
       );
       const data = await res.json();
-      console.log(data.data);
+
       setShow(data.data);
-      console.log(show, "show");
+
       setLoading(false);
     };
     fetchShow();

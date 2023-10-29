@@ -8,7 +8,6 @@ const MobNav = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();
   const [activeItem, setActiveItem] = useState("Home");
-  const [isVisible, setVisible] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -56,7 +55,7 @@ const MobNav = () => {
               onClick={() => {
                 setIsSearchVisible(() => false);
               }}
-              class="fa-solid fa-arrow-left"
+              className="fa-solid fa-arrow-left"
             ></i>
             <div className="search">
               <Link to="/serach">

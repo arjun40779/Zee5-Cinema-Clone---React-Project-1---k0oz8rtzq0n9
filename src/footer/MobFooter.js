@@ -44,12 +44,12 @@ const MobFooter = () => {
             <h3>Connect with Us</h3>
             <Link to={"https://www.facebook.com/ZEE5/"} target="_blank">
               <div className="social-icon-container">
-                <i class="fa-brands fa-square-facebook"></i>
+                <i className="fa-brands fa-square-facebook"></i>
               </div>
             </Link>
             <Link to={"https://www.instagram.com/zee5/"} target="_blank">
               <div className="social-icon-container">
-                <i class="fa-brands fa-square-instagram"></i>
+                <i className="fa-brands fa-square-instagram"></i>
               </div>
             </Link>
             <Link to={"https://twitter.com/zee5india"} target="_blank">

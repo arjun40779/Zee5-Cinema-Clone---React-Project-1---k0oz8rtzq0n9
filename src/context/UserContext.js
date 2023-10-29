@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 const UserContext = createContext();
 const UserProvider = ({ children }) => {
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState({
     name: "Guest",

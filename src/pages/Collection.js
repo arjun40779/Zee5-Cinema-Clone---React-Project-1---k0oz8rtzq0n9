@@ -9,6 +9,7 @@ const Collection = ({ type, title }) => {
   /* Fetching the data and filtering  */
   const fetchData = async () => {
     if (page > 20) return;
+    
     setIsisLoading(true);
     const res = await fetch(
       `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100`,

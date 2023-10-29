@@ -26,7 +26,7 @@ const MovieProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-    console.log(data);
+  
   }, []);
 
   const contextValues = { data, isLoading, title, setTitle };

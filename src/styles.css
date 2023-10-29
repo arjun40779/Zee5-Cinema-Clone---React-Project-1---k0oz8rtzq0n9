@@ -180,6 +180,7 @@ hr {
 .collection {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  grid-gap: 1rem;
 }
 @media (max-width: 1000px) {
   .collection {

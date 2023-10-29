@@ -20,7 +20,7 @@ const Card = ({ show }) => {
         <div className="btns">
           <Link to={`/details/${show._id}`}>
             <div className="watch-btn">
-              <i class="fa-solid fa-play"></i> Watch
+              <i className="fa-solid fa-play"></i> Watch
             </div>
           </Link>
           <AddToWatchlist show={show} />

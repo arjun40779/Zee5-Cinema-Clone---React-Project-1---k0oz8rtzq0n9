@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 const AddToWatchlist = ({ show }) => {
-  console.log;
+  
   const [color, setColor] = useState("regular");
   const { token, isLoggedIn } = useUserContext();
   const url = "https://academics.newtonschool.co/api/v1/ott/watchlist/like";

@@ -50,7 +50,7 @@ const RightNav = ({ msg }) => {
                 <h3 className="right-nav-user-name">{user.name}</h3>
               </div>
               <Link to={"./myprofile"}>
-                <i class="fa-solid fa-greater-than"></i>
+                <i className="fa-solid fa-greater-than"></i>
               </Link>
             </div>
             <ul className="right-nav-list">

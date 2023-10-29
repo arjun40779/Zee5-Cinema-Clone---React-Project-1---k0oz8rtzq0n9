@@ -71,7 +71,7 @@ const HeroBanner = () => {
     >
       {data.map((item) => {
         return (
-          <div className="carousel-container">
+          <div className="carousel-container" key={item.id}>
             <img src={item.thumbnail} alt={item.title}></img>
           </div>
         );
