@@ -22,7 +22,6 @@ export default function Signup() {
     initialValues: user,
     validationSchema: signUpSchema,
     onSubmit: (values) => {
-      console.log(values);
       register(values);
     },
   });
@@ -43,7 +42,7 @@ export default function Signup() {
       }
     );
     const data = await res.json();
-    console.log(userData, data);
+
     if (data.status == "success") {
       setIsLoggedIn(true);
       setUser(data.data);

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import App from "../App";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { LoginSchema } from "./LoginSchema";
-import { signUpSchema } from "./Schema";
 import CloseBtn from "../components/CloseBtn";
 import { useUserContext } from "../context/UserContext";
-import Message from "../components/Message";
 export default function Login() {
   const navigate = useNavigate();
   const { setIsLoggedIn, setUser, setToken } = useUserContext();
@@ -29,7 +26,6 @@ export default function Login() {
     initialValues: user,
     validationSchema: LoginSchema,
     onSubmit: (values) => {
-      console.log(values);
       login(values);
     },
   });
@@ -50,7 +46,7 @@ export default function Login() {
       }
     );
     const data = await res.json();
-    console.log(data);
+
     if (data.status == "success") {
       setIsLoggedIn(true);
       setUser(data.data);

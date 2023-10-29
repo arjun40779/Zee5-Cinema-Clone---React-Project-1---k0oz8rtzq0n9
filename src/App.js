@@ -1,14 +1,8 @@
 import "./styles.css";
 import Navbar from "./navigation/Navbar";
-
-import { useEffect, useState } from "react";
-
 import Main from "./components/Main";
 import MobFooter from "./footer/MobFooter";
-
 export default function App() {
-  const [data, setData] = useState([]);
-
   const fetchData = async () => {
     const res = await fetch(
       "https://academics.newtonschool.co/api/v1/ott/show?limit=1000",
@@ -22,7 +16,6 @@ export default function App() {
       }
     );
     const data = await res.json();
-    /* console.log(data.data); */
   };
   fetchData();
 

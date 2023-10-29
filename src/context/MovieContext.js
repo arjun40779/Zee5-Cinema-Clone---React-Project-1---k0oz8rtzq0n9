@@ -16,11 +16,11 @@ const MovieProvider = ({ children }) => {
           token:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhOWRlYzE3ZGEyNTMyYTM1MzI4NiIsImlhdCI6MTY5MzQ5MzkzMiwiZXhwIjoxNzI1MDI5OTMyfQ.G7iEnDNK3eNO9TPRmPVIpL7bFc-UIQBqd4OQciTxVms",
         },
-      },
+      }
     );
     const data = await res.json();
     setData((prev) => [...prev, ...data.data]);
-    console.log(data.data);
+
     setIsisLoading(false);
   };
 

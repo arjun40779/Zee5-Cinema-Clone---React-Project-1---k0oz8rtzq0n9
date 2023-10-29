@@ -14,9 +14,7 @@ const RightNav = ({ msg }) => {
       setActiveIndex(index); // Clicking an inactive item shows the list
     }
   };
-  const cs = () => {
-    alert("comming soon");
-  };
+
   const hideNav = (e) => {
     /*     alert(e.target.tagName); */
     if (

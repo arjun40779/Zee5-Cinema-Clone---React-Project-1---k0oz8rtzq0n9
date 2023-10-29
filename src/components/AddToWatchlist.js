@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 const AddToWatchlist = ({ show }) => {
+  console.log;
   const [color, setColor] = useState("regular");
   const { token, isLoggedIn } = useUserContext();
   const url = "https://academics.newtonschool.co/api/v1/ott/watchlist/like";
@@ -18,9 +19,9 @@ const AddToWatchlist = ({ show }) => {
   const addShow = async () => {
     const res = await fetch(url, options);
     const data = await res.json();
-    console.log(data);
+
     alert(data.message);
-    console.log(show._id, "show id");
+
     if (color == "solid") {
       setColor("regular");
     } else {

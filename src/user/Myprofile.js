@@ -3,11 +3,9 @@ import { useUserContext } from "../context/UserContext";
 import Login from "./Login";
 import "./Myprofile.css";
 
-import ProfileImg from "./ProfileImg";
 const Myprofile = () => {
   const navigate = useNavigate();
   const { isLoggedIn, setIsLoggedIn, user, token } = useUserContext();
-  console.log(user);
 
   const logout = () => {
     setIsLoggedIn(false);

@@ -2,7 +2,6 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import { useMovieContext } from "../context/MovieContext";
-
 import MoreList from "./MoreList";
 import { useState } from "react";
 import RightNav from "./RightNav";
@@ -11,7 +10,6 @@ const Navbar = () => {
   const { isLoggedIn } = useUserContext();
   const { setTitle } = useMovieContext();
   const [activeItem, setActiveItem] = useState("Home");
-  const [isVisible, setVisible] = useState(false);
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
