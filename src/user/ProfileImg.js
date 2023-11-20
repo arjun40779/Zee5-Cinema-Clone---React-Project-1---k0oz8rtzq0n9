@@ -4,14 +4,12 @@ import { useUserContext } from "../context/UserContext";
 const ProfileImg = ({ user }) => {
   const [img, setImg] = useState(user.profileImage);
   const { token } = useUserContext();
-
   const url =
     "https://academics.newtonschool.co/api/v1/user/updateProfileImage";
   const options = {
     method: "PATCH",
     headers: {
       Authorization: "Bearer " + token,
-
       projectId: "k0oz8rtzq0n9",
     },
     body: {
@@ -23,7 +21,7 @@ const ProfileImg = ({ user }) => {
     const response = await fetch(url, options);
     const data = await response.json();
   };
-  /* choose Image */
+
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
 

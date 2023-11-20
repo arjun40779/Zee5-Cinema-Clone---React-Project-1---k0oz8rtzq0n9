@@ -1,9 +1,9 @@
-import Collection from "./Collection";
+import ShowList from "../components/ShowList";
 
 const Movies = () => {
   return (
     <div className="movies">
-      <Collection type={"movie"} title={"Movies"} />
+      <ShowList type={"movie"} title={"Movies"} />
     </div>
   );
 };

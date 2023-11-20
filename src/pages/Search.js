@@ -4,13 +4,11 @@ import { useMovieContext } from "../context/MovieContext";
 
 const Search = () => {
   const { title } = useMovieContext();
-
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const url = `https://academics.newtonschool.co/api/v1/ott/show?filter={"title" : \"${title}\"}`;
   const fetchData = async () => {
     setIsLoading(true);
-
     const res = await fetch(url, {
       method: "GET",
       headers: {
@@ -20,7 +18,6 @@ const Search = () => {
       },
     });
     const data = await res.json();
-
     setResults(data.data);
     setIsLoading(false);
   };

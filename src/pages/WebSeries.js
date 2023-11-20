@@ -1,9 +1,9 @@
-import Collection from "./Collection";
+import ShowList from "../components/ShowList";
 
 const WebSeries = () => {
   return (
     <div className="web-series">
-      <Collection type={"web series"} title={"Web Series"} />
+      <ShowList type={"web series"} title={"Web Series"} />
     </div>
   );
 };

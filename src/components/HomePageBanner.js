@@ -61,7 +61,7 @@ const data = [
     keywords: ["Comedy", "Thriller"],
   },
 ];
-const HeroBanner = () => {
+const HomePageBanner = () => {
   return (
     <Carousel
       autoPlay={true}
@@ -80,4 +80,4 @@ const HeroBanner = () => {
   );
 };
 
-export default HeroBanner;
+export default HomePageBanner;

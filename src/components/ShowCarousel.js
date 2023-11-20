@@ -4,9 +4,9 @@ import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import { useMovieContext } from "../context/MovieContext";
-export default function Content({ heading, type }) {
+export default function ShowCarousel({ heading, type }) {
   const { data, isLoading } = useMovieContext();
-  const fdata = data.filter((item) => item.type === type);
+  const filteredData = data.filter((item) => item.type === type);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -16,7 +16,7 @@ export default function Content({ heading, type }) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 9,
+      items: 8,
       slidesToSlide: 3,
     },
     tablet: {
@@ -45,8 +45,8 @@ export default function Content({ heading, type }) {
         autoPlaySpeed={500}
         itemClass="carousel-item-padding-40-px"
       >
-        {fdata.map((item) => {
-          return <Card key={item._id} show={item} />;
+        {filteredData.map((item) => {
+          return <Card key={item._id} show={item} isLoading={isLoading} />;
         })}
       </Carousel>
     </div>

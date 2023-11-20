@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { LoginSchema } from "./LoginSchema";
 import CloseBtn from "../components/CloseBtn";
 import { useUserContext } from "../context/UserContext";
+
 export default function Login() {
   const navigate = useNavigate();
   const { setIsLoggedIn, setUser, setToken } = useUserContext();
@@ -51,7 +52,6 @@ export default function Login() {
       setIsLoggedIn(true);
       setUser(data.data);
       setToken(data.token);
-
       navigate("/");
     } else {
       setIsLoggedIn(false);

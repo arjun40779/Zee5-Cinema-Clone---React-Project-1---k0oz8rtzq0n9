@@ -1,17 +1,16 @@
 import React from "react";
-
-import Content from "../components/Content";
-
+import ShowCarousel from "../components/ShowCarousel";
 import "./homepage.css";
+import HomePageBanner from "../components/HomePageBanner";
 
-import HeroBanner from "../components/HeroBanner";
-export default function Homepage({ data }) {
+export default function Homepage() {
+  const ShowCarouselList = ["web series", "tv show", "movie"];
   return (
     <div className="homepage">
-      <HeroBanner />
-      <Content type={"web series"} heading="Web Series" />
-      <Content type={"tv show"} heading="Tv Show" />
-      <Content type={"movie"} heading="Movies" />
+      <HomePageBanner />
+      {ShowCarouselList.map((item) => {
+        return <ShowCarousel type={item} heading={item} />;
+      })}
     </div>
   );
 }

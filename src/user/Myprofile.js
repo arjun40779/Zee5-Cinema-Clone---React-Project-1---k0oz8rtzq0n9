@@ -6,14 +6,13 @@ import "./Myprofile.css";
 const Myprofile = () => {
   const navigate = useNavigate();
   const { isLoggedIn, setIsLoggedIn, user, token } = useUserContext();
-
   const logout = () => {
     setIsLoggedIn(false);
     navigate("/");
   };
   if (!isLoggedIn) {
     return <Login />;
-  } /* upload image to server*/
+  }
 
   return (
     <div className="myprofile">

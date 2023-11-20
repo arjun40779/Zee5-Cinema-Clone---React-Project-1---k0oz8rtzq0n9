@@ -1,16 +1,17 @@
 import { React, useEffect, useState } from "react";
 import debounce from "lodash/debounce";
-import Card from "../components/Card";
+import Card from "./Card";
 import "./collection.css";
-const Collection = ({ type, title }) => {
+import ClipLoader from "react-spinners/ClipLoader";
+
+const ShowList = ({ type, title }) => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-  const [isLoading, setIsisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
   /* Fetching the data and filtering  */
   const fetchData = async () => {
-    if (page > 20) return;
-
-    setIsisLoading(true);
+    setIsLoading(true);
     const res = await fetch(
       `https://academics.newtonschool.co/api/v1/ott/show?page=${page}&limit=100`,
       {
@@ -26,7 +27,7 @@ const Collection = ({ type, title }) => {
     const filData = data.data.filter((item) => item.type == type);
     setData((prev) => [...prev, ...filData]);
     setPage((prev) => prev + 1);
-    setIsisLoading(false);
+    setIsLoading(false);
   };
   useEffect(() => {
     fetchData();
@@ -39,6 +40,8 @@ const Collection = ({ type, title }) => {
         document.documentElement.offsetHeight &&
       !isLoading
     ) {
+      if (page > 10) return;
+      setIsLoading(true);
       debouncedFetchMoreItems();
     }
   };
@@ -48,7 +51,7 @@ const Collection = ({ type, title }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [data, isLoading]);
-
+  //spinner
   return (
     <div className={`${type}`}>
       <p className="title">{title}</p>
@@ -58,12 +61,18 @@ const Collection = ({ type, title }) => {
         })}
       </div>
       {isLoading && (
-        <div className="loading">
-          <h1>Loading...</h1>
+        <div style={{ marginTop: "2rem" }} className="loading">
+          <ClipLoader
+            color={"white"}
+            loading={isLoading}
+            size={50}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
         </div>
       )}
     </div>
   );
 };
 
-export default Collection;
+export default ShowList;

@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { signUpSchema } from "./Schema";
 import CloseBtn from "../components/CloseBtn";
 import { useUserContext } from "../context/UserContext";
+
 export default function Signup() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");

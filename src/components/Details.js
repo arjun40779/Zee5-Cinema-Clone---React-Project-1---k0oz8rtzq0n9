@@ -1,6 +1,8 @@
 import { useParams } from "react-router";
 import { useEffect } from "react";
 import { useState } from "react";
+import ReactPlayer from "react-player/lazy";
+
 import "./Details.css";
 const Details = ({}) => {
   const { id } = useParams();
@@ -35,9 +37,7 @@ const Details = ({}) => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <video className="video" controls>
-            <source src={show.video_url} type="video/mp4" />
-          </video>
+          <ReactPlayer url={show.video_url} controls={true} light={true} />
           <h1>{show.title}</h1>
           <h4>
             {show.type} {loading ? null : show.createdAt.slice(0, 4)}{" "}

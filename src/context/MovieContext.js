@@ -1,5 +1,5 @@
-// MovieContext.js
 import React, { createContext, useContext, useState, useEffect } from "react";
+
 const MovieContext = createContext();
 const MovieProvider = ({ children }) => {
   const [data, setData] = useState([]);
@@ -20,15 +20,12 @@ const MovieProvider = ({ children }) => {
     );
     const data = await res.json();
     setData((prev) => [...prev, ...data.data]);
-
     setIsisLoading(false);
   };
 
   useEffect(() => {
     fetchData();
-  
   }, []);
-
   const contextValues = { data, isLoading, title, setTitle };
 
   return (

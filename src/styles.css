@@ -197,20 +197,3 @@ hr {
   display: flex;
   justify-content: center;
 }
-/* Change the scrollbar's track and thumb color */
-::-webkit-scrollbar {
-  width: 0; /* Change the scrollbar width */
-}
-
-::-webkit-scrollbar-track {
-  background: #111010; /* Change the track color */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0a0a0a; /* Change the thumb color */
-}
-
-/* Change the scrollbar's hover effect */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--bgColor); /* Change the hover color */
-}
