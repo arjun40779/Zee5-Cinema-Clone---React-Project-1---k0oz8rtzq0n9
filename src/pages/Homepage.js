@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ShowCarousel from "../components/ShowCarousel";
 import "./homepage.css";
 import HomePageBanner from "../components/HomePageBanner";
