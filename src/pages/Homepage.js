@@ -5,6 +5,9 @@ import HomePageBanner from "../components/HomePageBanner";
 
 export default function Homepage() {
   const ShowCarouselList = ["web series", "tv show", "movie"];
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   return (
     <div className="homepage">
       <HomePageBanner />
